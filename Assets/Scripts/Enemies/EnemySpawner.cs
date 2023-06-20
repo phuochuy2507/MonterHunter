@@ -6,28 +6,37 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField]
     private GameObject swarmerPrefab;
-    [SerializeField]
-    private GameObject bigSwarmerPrefab;
+    // [SerializeField]
+    // private GameObject bigSwarmerPrefab;
 
     [SerializeField]
     private float swarmerInterval = 3.5f;
-    [SerializeField]
-    private float bigSwarmerInterval = 10f;
-    [SerializeField]
-    private int maxEnemy = 2;
+    // [SerializeField]
+    // private float bigSwarmerInterval = 10f;
+    public static int EnemytoSpawn = 2;
+    public GameObject objectPrefab;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(spawnEnemy(swarmerInterval, swarmerPrefab, 0));
-        StartCoroutine(spawnEnemy(bigSwarmerInterval, bigSwarmerPrefab, 0));
+        StartCoroutine(spawnEnemy(swarmerInterval, swarmerPrefab));
+        // StartCoroutine(spawnEnemy(bigSwarmerInterval, bigSwarmerPrefab, 0));
     }
 
-    private IEnumerator spawnEnemy(float interval, GameObject enemy, int dem)
+    private IEnumerator spawnEnemy(float interval, GameObject enemy)
     {
-        if(dem == maxEnemy) yield break;
+        if(EnemytoSpawn == 0) yield break;
         yield return new WaitForSeconds(interval);
+        ManagerEnemies.no_of_enemies +=1;
+        EnemytoSpawn -= 1;
         GameObject newEnemy = Instantiate(enemy, new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized, Quaternion.identity);
-        StartCoroutine(spawnEnemy(interval, enemy, dem+1));
+        StartCoroutine(spawnEnemy(interval, enemy));
+    }
+
+    private void Update() {
+
+        if(ManagerEnemies.no_of_enemies == 0 && EnemytoSpawn == 0) {
+            GameObject newObject = Instantiate(objectPrefab, transform.position, transform.rotation);
+        }
     }
 }

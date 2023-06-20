@@ -35,9 +35,18 @@ public class EnemyHealth : MonoBehaviour
 
     public void DetectDeath() {
         if (currentHealth <= 0) {
+            ManagerEnemies.no_of_enemies -= 1;
             Instantiate(deathVFXPrefab, transform.position, Quaternion.identity);
             GetComponent<PickUpSpawner>().DropItems();
             Destroy(gameObject);
         }
+    }
+
+    public bool checkAllDie(){
+        if (currentHealth <= 0)
+        {
+            return true;
+        }
+       else return false;
     }
 }
