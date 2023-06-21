@@ -35,8 +35,6 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update() {
 
-        if(ManagerEnemies.no_of_enemies == 0 && EnemytoSpawn == 0) {
-            GameObject newObject = Instantiate(objectPrefab, transform.position, transform.rotation);
-        }
+        
     }
 }
