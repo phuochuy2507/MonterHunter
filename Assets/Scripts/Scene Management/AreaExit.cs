@@ -11,10 +11,12 @@ public class AreaExit : MonoBehaviour
     void Start() {
     }
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.GetComponent<PlayerController>()) {
-            SceneManagement.Instance.SetTransitionName(sceneTransitionName);
-            UIFade.Instance.FadeToBlack();
-            StartCoroutine(LoadSceneRoutine());
+        if(ManagerEnemies.no_of_enemies == 0 && EnemySpawner.EnemytoSpawn == 0) {
+            if (other.gameObject.GetComponent<PlayerController>()) {
+                SceneManagement.Instance.SetTransitionName(sceneTransitionName);
+                UIFade.Instance.FadeToBlack();
+                StartCoroutine(LoadSceneRoutine());
+            }
         }
     }
 
