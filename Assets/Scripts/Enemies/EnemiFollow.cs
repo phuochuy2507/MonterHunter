@@ -44,11 +44,17 @@ public class EnemiFollow : MonoBehaviour
         if (DistancePlayer < LineOfsite && DistancePlayer > ShootingRange)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, player.position, Speed * Time.deltaTime);
+             myAnimator.SetBool("Follow", true);
+             myAnimator.SetBool("Attack", false);
         }
         else if (DistancePlayer <= ShootingRange && fireTime < Time.time)
         {
             Instantiate(BulletFire, BulletParent.transform.position, Quaternion.identity);
             fireTime = Time.time + fireRate;
+              myAnimator.SetBool("Attack", true);
+        }
+        else{
+        myAnimator.SetBool("Follow", false);
         }
     }
 
@@ -63,10 +69,10 @@ public class EnemiFollow : MonoBehaviour
     {
         if (player.position.x > positionBoss.position.x)
         {
-            spriteRenderer.flipX = true;
+            spriteRenderer.flipX = false;
         }
         else{
-             spriteRenderer.flipX = false;
+             spriteRenderer.flipX = true;
         }
 
     }
