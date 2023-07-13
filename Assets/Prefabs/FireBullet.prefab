@@ -36,7 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3068914246448068781
 SpriteRenderer:
@@ -122,9 +122,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000000014901161, y: 0}
+  m_Offset: {x: 1.1655784, y: -0.5762416}
   serializedVersion: 2
-  m_Radius: 0.24276395
+  m_Radius: 2.42986
 --- !u!50 &3068914246448068787
 Rigidbody2D:
   serializedVersion: 4
@@ -214,4 +214,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d51a1d4fc80e054999d1e81f4e2b033, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 12
+  force: 12

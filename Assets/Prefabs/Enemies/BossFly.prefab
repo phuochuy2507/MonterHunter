@@ -630,7 +630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754fb85db4c090d4695e62a5c7ae57ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockBackTime: 0.01
+  knockBackTime: 0.2
 --- !u!114 &5589377747241882327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -716,9 +716,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c124df8680fce047933e92db18bebe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 20
+  startingHealth: 100
   deathVFXPrefab: {fileID: 7882678833386788365, guid: e06debc5e373cc642930e5553d0e3c9f, type: 3}
-  knockBackThrust: 15
+  knockBackThrust: 8
   healthBar: {fileID: 5455982875917829866}
 --- !u!60 &5671990855831559728
 PolygonCollider2D:
