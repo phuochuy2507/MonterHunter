@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2704c9fdaea5b2c449cb3e560c6b8936
+guid: e127e65300f6d7e43b6be7b7e4d0bf9d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -107,55 +107,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: miniSekeletonAttack_0
+      name: redBoneWalk_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 0
-        width: 47
-        height: 89
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9f97d5386f863f4797e10b504501f09
-      internalID: 849175905
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: miniSekeletonAttack_1
-      rect:
-        serializedVersion: 2
-        x: 183
-        y: 12
-        width: 51
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb62ff85627859945ba70eebf8ffe226
-      internalID: -321121602
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: miniSekeletonAttack_2
-      rect:
-        serializedVersion: 2
-        x: 270
-        y: 12
+        x: 0
+        y: 10
         width: 55
-        height: 67
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 083c14c085f5a8b48b37d4c516017340
-      internalID: -305642975
+      spriteID: 4dda47998cb97e0438eccc98ac826711
+      internalID: -2112951591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: miniSekeletonAttack_3
+      name: redBoneWalk_1
       rect:
         serializedVersion: 2
-        x: 352
-        y: 12
-        width: 60
-        height: 64
+        x: 66
+        y: 10
+        width: 48
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,8 +142,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fef8adba7e028ce4ebdc18e04ba39665
-      internalID: -2115780874
+      spriteID: 14c37114d6b80e34197f2c4a347f249d
+      internalID: -1677449922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBoneWalk_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 8
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d816c433435860d4aa43b70301cc4c63
+      internalID: -1000300505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBoneWalk_3
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 6
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13f19890151038148834b28bd686cd35
+      internalID: 916438729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBoneWalk_4
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 10
+        width: 52
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2baf3a138d9bd74ea68cd639a8e336c
+      internalID: -1328636715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBoneWalk_6
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 12
+        width: 40
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd5aae9ec323b241b3f54dfc65bcfdf
+      internalID: -1954821398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBoneWalk_8
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 8
+        width: 50
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d75689d8c31da43b377eae898cd8fd
+      internalID: -541697220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBoneWalk_10
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 12
+        width: 31
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ec99d005c812f0479ea6de1dcae7f69
+      internalID: 1581460437
       vertices: []
       indices: 
       edges: []
@@ -201,10 +285,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      miniSekeletonAttack_2: -305642975
-      miniSekeletonAttack_1: -321121602
-      miniSekeletonAttack_0: 849175905
-      miniSekeletonAttack_3: -2115780874
+      redBoneWalk_3: 916438729
+      redBoneWalk_10: 1581460437
+      redBoneWalk_4: -1328636715
+      redBoneWalk_13: 224284821
+      redBoneWalk_2: -1000300505
+      redBoneWalk_7: -1460319997
+      redBoneWalk_0: -2112951591
+      redBoneWalk_8: -541697220
+      redBoneWalk_12: -1699341068
+      redBoneWalk_9: -239375804
+      redBoneWalk_1: -1677449922
+      redBoneWalk_11: -1265295765
+      redBoneWalk_6: -1954821398
+      redBoneWalk_5: 1807410195
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

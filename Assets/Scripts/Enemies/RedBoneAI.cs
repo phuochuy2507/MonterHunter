@@ -1,10 +1,10 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAI : MonoBehaviour
+public class RedBoneAI : MonoBehaviour
 {
-    [SerializeField] private float roamChangeDirFloat = 2f;
+   [SerializeField] private float roamChangeDirFloat = 2f;
     [SerializeField] private float attackRange = 0f;
     [SerializeField] private MonoBehaviour enemyType;
     [SerializeField] private float attackCooldown = 2f;
@@ -26,6 +26,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Awake() {
         enemyPathfinding = GetComponent<EnemyPathfinding>();
+        redBoneFollow = GetComponent<RedBoneFollow>();
         state = State.Roaming;
     }
 
@@ -34,7 +35,10 @@ public class EnemyAI : MonoBehaviour
     }
 
     private void Update() {
+        if (redBoneFollow.doneWakeUp == true)
+        {
         MovementStateControl();
+        }
     }
 
     private void MovementStateControl() {

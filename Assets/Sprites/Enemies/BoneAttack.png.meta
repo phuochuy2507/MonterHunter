@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9dd1a8be0ea8e334eaccf45d39cebeb1
+guid: a9837fde2137ac04780a79405ce967b9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -107,13 +107,55 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: miniSekeletons_0
+      name: BoneAttack_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 17
+        x: 12
+        y: 1
+        width: 41
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06201b7c48d3cab41b9b6de07d1f38ce
+      internalID: 977428278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoneAttack_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 40
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 995814a98dc7d544bafcde421fe69e98
+      internalID: 688882011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BoneAttack_3
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 0
         width: 46
-        height: 74
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31f661d2411895b47934df4249ee0857
-      internalID: -229501116
+      spriteID: 148ce1eb18588c14ea2f5bf70ce429d6
+      internalID: 2056594954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: miniSekeletons_1
+      name: BoneAttack_5
       rect:
         serializedVersion: 2
-        x: 107
-        y: 17
-        width: 48
-        height: 73
+        x: 182
+        y: 3
+        width: 82
+        height: 56
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da954163f4d83de44a11189f602f791f
-      internalID: -296153884
+      spriteID: 4b5a76e28e97eb84b942ecfa611adaaf
+      internalID: 229874829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: miniSekeletons_2
+      name: BoneAttack_6
       rect:
         serializedVersion: 2
-        x: 195
-        y: 17
-        width: 48
-        height: 73
+        x: 272
+        y: 1
+        width: 87
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,41 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 831a71d951492e94bba8eecd119ecfca
-      internalID: -1596321733
+      spriteID: d901785b319eaab48b9dfc9486a9c709
+      internalID: 1940258682
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: miniSekeletons_3
-      rect:
-        serializedVersion: 2
-        x: 283
-        y: 17
-        width: 47
-        height: 71
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2bcf1837d04db064195b4904c8c9b384
-      internalID: -2071016114
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: miniSekeletons_4
+      name: BoneAttack_7
       rect:
         serializedVersion: 2
         x: 372
-        y: 17
-        width: 47
-        height: 73
+        y: 0
+        width: 44
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,29 +226,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d5ee2310966ef241ac5ea1fe2fbf249
-      internalID: -945329454
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: miniSekeletons_5
-      rect:
-        serializedVersion: 2
-        x: 463
-        y: 17
-        width: 48
-        height: 73
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 46321ccf65271c4478d5b98170f413f2
-      internalID: -2053731650
+      spriteID: b8f69f09f0235a7418bb113941883408
+      internalID: 1657887385
       vertices: []
       indices: 
       edges: []
@@ -243,12 +243,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      miniSekeletons_2: -1596321733
-      miniSekeletons_3: -2071016114
-      miniSekeletons_0: -229501116
-      miniSekeletons_1: -296153884
-      miniSekeletons_4: -945329454
-      miniSekeletons_5: -2053731650
+      BoneAttack_0: 977428278
+      BoneAttack_3: 2056594954
+      BoneAttack_6: 1940258682
+      BoneAttack_5: 229874829
+      BoneAttack_2: -477427714
+      BoneAttack_4: -1079252806
+      BoneAttack_8: -2144299768
+      BoneAttack_7: 1657887385
+      BoneAttack_1: 688882011
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
