@@ -198,7 +198,7 @@ Transform:
   - {fileID: 1574354672597456618}
   - {fileID: 1574354673382868895}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1574354672741408209
 SpriteRenderer:
@@ -374,9 +374,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c1c9d15e6fe4774e81bda2f3ed62efb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
+  maxHealth: 10
   knockBackThrustAmount: 10
   damageRecoveryTime: 1
+  ui_canvas_to_destroy: {fileID: 0}
 --- !u!114 &1574354672741408218
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -115,7 +115,7 @@ public class RockFollow : MonoBehaviour
 
     IEnumerator Example()
     {
-        yield return new WaitForSeconds(60);
+        yield return new WaitForSeconds(20);
         myAnimator.SetBool("Mutiple", true);
         yield return new WaitForSeconds(1);
         SkillRock2 = true;

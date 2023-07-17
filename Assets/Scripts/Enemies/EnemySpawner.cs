@@ -15,7 +15,6 @@ public class EnemySpawner : MonoBehaviour
     private float bigSwarmerInterval = 10f;
     public int num_to_spawn = 20;
     public static int EnemytoSpawn;
-    public GameObject objectPrefab;
 
     void Start()
     {

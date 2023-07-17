@@ -9,20 +9,20 @@ public class SlimeApear : MonoBehaviour
     private GameObject[] slimeEnemies;
     private bool currentEnemies = false;
 
-    private void Start() {
-        StartCoroutine(checkEnemies());
-    }
+    // private void Start() {
+    //     StartCoroutine(checkEnemies());
+    // }
     private void Update() {
-       if (ManagerEnemies.no_of_enemies == 0 && currentEnemies == true)
+       if (ManagerEnemies.no_of_enemies == 1 && EnemySpawner.EnemytoSpawn == 0)
        {
          SlimeBoss.SetActive(true);
        }
     }
 
-    private IEnumerator checkEnemies(){
-         yield return new WaitForSeconds(5);
-         currentEnemies = true;
+    // private IEnumerator checkEnemies(){
+    //      yield return new WaitForSeconds(5);
+    //      currentEnemies = true;
 
 
-    } 
+    // } 
 }
