@@ -17,12 +17,10 @@ public class EnemySpawner : MonoBehaviour
     public static int EnemytoSpawn;
     public GameObject objectPrefab;
 
-    // Start is called before the first frame update
     void Start()
     {
         EnemytoSpawn = num_to_spawn;
         StartCoroutine(spawnEnemy(swarmerInterval, swarmerPrefab));
-        // StartCoroutine(spawnEnemy(bigSwarmerInterval, bigSwarmerPrefab, 0));
     }
 
     private IEnumerator spawnEnemy(float interval, GameObject enemy)
