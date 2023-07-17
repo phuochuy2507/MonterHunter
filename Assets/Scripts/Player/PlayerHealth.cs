@@ -41,7 +41,8 @@ public class PlayerHealth : Singleton<PlayerHealth>
     {
         EnemyAI enemy = other.gameObject.GetComponent<EnemyAI>();
         RedBoneAI redBoneSkeleton = other.gameObject.GetComponent<RedBoneAI>();
-        if (enemy || redBoneSkeleton)
+        RockBossAI rockBossAI = other.gameObject.GetComponent<RockBossAI>();
+        if (enemy || redBoneSkeleton || rockBossAI)
         {
             TakeDamage(1, other.transform);
         }

@@ -15,21 +15,23 @@ public class RedBoneFollow : MonoBehaviour
     [SerializeField]
     private float LineOfsite;
     private SpriteRenderer spriteRenderer;
+    private Animator myAnimator;
     [SerializeField]
     private float ShootingRange;
     [SerializeField]
-    private GameObject BulletFire;
-    [SerializeField]
-    private GameObject BulletParent;
-    private Animator myAnimator;
-    [SerializeField]
-    private float fireRate = 1f;
-    [SerializeField]
     private float fireTime;
-    public bool doneWakeUp;
+    [SerializeField]
+    private Transform swordOfRed;
+
+    public bool doneWakeUp = false;
+    public bool checkNearEnemies;
+    EnemyPathfinding enemyPathfinding;
+
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        enemyPathfinding = GetComponent<EnemyPathfinding>();
         myAnimator = GetComponent<Animator>();
     }
     void Start()
@@ -48,21 +50,38 @@ public class RedBoneFollow : MonoBehaviour
     {
         if (doneWakeUp == true)
         {
-             float DistancePlayer = Vector2.Distance(player.position, transform.position);
-        if (DistancePlayer < LineOfsite && DistancePlayer > ShootingRange)
+            float DistancePlayer = Vector2.Distance(player.position, transform.position);
+            if (DistancePlayer < LineOfsite && DistancePlayer > ShootingRange)
+            {
+                myAnimator.SetBool("Follow", true);
+                myAnimator.SetBool("Attack", false);
+                Debug.Log("follow him");
+                transform.position = Vector2.MoveTowards(this.transform.position, player.position, Speed * Time.deltaTime);
+
+            }
+            else if (DistancePlayer <= ShootingRange)
+            {
+                myAnimator.SetBool("Attack", true);
+                transform.position = Vector2.MoveTowards(this.transform.position, player.position, 0 * Time.deltaTime);
+                enemyPathfinding.moveSpeed = 0;
+                if (player.position.x > positionBoss.position.x)
+                {
+                    spriteRenderer.flipX = false;
+                    swordOfRed.rotation = Quaternion.Euler(0, 0, 0);
+                }
+                else
+                {
+                    spriteRenderer.flipX = true;
+                    swordOfRed.rotation = Quaternion.Euler(0, -180, 0);
+                }
+            }
+        }
+        else
         {
-             myAnimator.SetBool("Follow", true);
-            Debug.Log("follow him");
-            transform.position = Vector2.MoveTowards(this.transform.position, player.position, Speed * Time.deltaTime);
-            
+            Debug.Log("not follow or attack");
         }
-        else if (DistancePlayer <= ShootingRange && fireTime < Time.time)
-        {
-            Debug.Log("kill him");
-             myAnimator.SetBool("Attack", true);
-        }
-        }
-       
+
+
     }
 
     private void OnDrawGizmosSelected()
@@ -84,4 +103,7 @@ public class RedBoneFollow : MonoBehaviour
         }
 
     }
+
+
+
 }
