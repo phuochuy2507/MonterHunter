@@ -28,14 +28,17 @@ public class RockFollow : MonoBehaviour
     [SerializeField]
     private float fireTime;
     EnemyPathfinding enemyPathfinding;
-    public bool checkRockSkill2 = false;
+    public bool SkillRock2 = false;
     public bool Skill1Rock = true;
+     public bool Skill3Rock = false;
     RockSkill2 rockSkill2;
+    RockSkill3 rockSkill3;
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         enemyPathfinding = GetComponent<EnemyPathfinding>();
         rockSkill2 = GetComponent<RockSkill2>();
+        rockSkill3 = GetComponent<RockSkill3>();
         myAnimator = GetComponent<Animator>();
     }
     void Start()
@@ -48,7 +51,7 @@ public class RockFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Skill1Rock == true &&  checkRockSkill2 == false)
+        if (Skill1Rock == true && SkillRock2 == false && Skill3Rock == false)
         {
             float DistancePlayer = Vector2.Distance(player.position, transform.position);
             if (DistancePlayer < LineOfsite && DistancePlayer > ShootingRange)
@@ -71,29 +74,66 @@ public class RockFollow : MonoBehaviour
                 }
             }
         }
-        else if (checkRockSkill2 == true && Skill1Rock == false)
+        else if (SkillRock2 == true && Skill1Rock == false && Skill3Rock == false)
         {
-            rockSkill2.Attack();
+            rockSkill3.Attack();
+        }
+        else if (SkillRock2 == false && Skill1Rock == false && Skill3Rock == true)
+        {
+            float DistancePlayer = Vector2.Distance(player.position, transform.position);
+            if (DistancePlayer < LineOfsite && DistancePlayer > ShootingRange)
+            {   
+                Speed = 5;
+                myAnimator.SetBool("Attack2", false);
+                transform.position = Vector2.MoveTowards(this.transform.position, player.position, Speed * Time.deltaTime);
+
+            }
+            else if (DistancePlayer <= ShootingRange && fireTime < Time.time)
+            {
+                myAnimator.SetBool("Attack2", true);
+                myAnimator.SetBool("UnMutiple", true);
+                if (player.position.x > positionBoss.position.x)
+                {
+                    spriteRenderer.flipX = false;
+                }
+                else
+                {
+                    spriteRenderer.flipX = true;
+                }
+            }
+        
         }
 
 
     }
 
+    public void CheckAttack2(){
+        enemyPathfinding.moveSpeed = 0;
+        transform.position = Vector2.MoveTowards(this.transform.position, player.position, 0 * Time.deltaTime);
+        rockSkill2.Attack();
+    }
+
     IEnumerator Example()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(60);
         myAnimator.SetBool("Mutiple", true);
         yield return new WaitForSeconds(1);
-        checkRockSkill2 = true;
+        SkillRock2 = true;
         Skill1Rock = false;
-        yield return new WaitForSeconds(30);
-         myAnimator.SetBool("UnMutiple", true);
+        Skill3Rock = false;
+        yield return new WaitForSeconds(40);
+        myAnimator.SetBool("UnMutiple", true);
+        myAnimator.SetBool("Forsure", true);
     }
 
 
-      IEnumerator ReadyForSkillThree(){
-         yield return new WaitForSeconds(50);
-      }
+    IEnumerator ReadyForSkillThree()
+    {
+        yield return new WaitForSeconds(4);
+        myAnimator.SetBool("UnMutiple", false);
+        myAnimator.SetBool("Forsure", false);
+        Skill3Rock = true;
+    }
 
     public void CheckAllreadyAttack()
     {
@@ -103,11 +143,10 @@ public class RockFollow : MonoBehaviour
         fireTime = Time.time + fireRate;
     }
 
-    public void CheckAllreadyOpen(){
-        myAnimator.SetBool("UnMutiple", false);
-        myAnimator.SetBool("Mutiple", false);
-         checkRockSkill2 = false;
-        Skill1Rock = true;
+    public void CheckAllreadyOpen()
+    {
+        SkillRock2 = false;
+        Skill1Rock = false;
         StartCoroutine(ReadyForSkillThree());
     }
 
