@@ -50,3 +50,6 @@ TagManager:
   - name: Foreground
     uniqueID: 3928980359
     locked: 0
+  - name: SlimeBoss
+    uniqueID: 935314741
+    locked: 0

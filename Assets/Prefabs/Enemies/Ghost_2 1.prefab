@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5742459328739659478
+--- !u!1001 &6760229992444350129
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -42,15 +42,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9034311603430229385, guid: facd13da21d5930458d401b5faaa572c, type: 3}
       propertyPath: m_RootOrder
-      value: -1
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 9034311603430229385, guid: facd13da21d5930458d401b5faaa572c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.37
+      value: 3.66
       objectReference: {fileID: 0}
     - target: {fileID: 9034311603430229385, guid: facd13da21d5930458d401b5faaa572c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.72
+      value: -4.28
       objectReference: {fileID: 0}
     - target: {fileID: 9034311603430229385, guid: facd13da21d5930458d401b5faaa572c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -86,11 +86,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9034311603430229389, guid: facd13da21d5930458d401b5faaa572c, type: 3}
       propertyPath: m_Name
-      value: Ghost (2)
+      value: Ghost_2
       objectReference: {fileID: 0}
     - target: {fileID: 9034311603430229389, guid: facd13da21d5930458d401b5faaa572c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
