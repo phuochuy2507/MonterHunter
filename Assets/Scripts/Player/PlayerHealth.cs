@@ -11,7 +11,6 @@ public class PlayerHealth : Singleton<PlayerHealth>
     [SerializeField] private int maxHealth = 3;
     [SerializeField] private float knockBackThrustAmount = 10f;
     [SerializeField] private float damageRecoveryTime = 1f;
-    [SerializeField] GameObject ui_canvas_to_destroy;
     private Slider healthSlider;
     private int currentHealth;
     private bool canTakeDamage = true;
@@ -87,9 +86,8 @@ public class PlayerHealth : Singleton<PlayerHealth>
     {
         yield return new WaitForSeconds(2f);
         Destroy(gameObject);
+        UIFade.Instance.btnGameOver.SetActive(true);
         Stamina.Instance.ReplenishStaminaOnDeath();
-        Destroy(ui_canvas_to_destroy);
-        SceneManager.LoadScene(TOWN_TEXT);
     }
 
     private IEnumerator DamageRecoveryRoutine()

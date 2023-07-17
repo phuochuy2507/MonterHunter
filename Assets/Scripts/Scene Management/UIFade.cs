@@ -7,8 +7,17 @@ public class UIFade : Singleton<UIFade>
 {
     [SerializeField] private Image fadeScreen;
     [SerializeField] private float fadeSpeed = 1f;
+    public GameObject btnGameOver;
 
     private IEnumerator fadeRoutine;
+
+
+    void Start() {
+        this.btnGameOver = GameObject.Find("ButtonGameOver");
+        this.btnGameOver.SetActive(false);
+        DontDestroyOnLoad(gameObject);
+        
+    }
 
     public void FadeToBlack() {
         if (fadeRoutine != null) {

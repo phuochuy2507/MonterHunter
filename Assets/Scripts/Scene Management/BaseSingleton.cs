@@ -4,5 +4,7 @@ using UnityEngine;
 
 public class BaseSingleton : Singleton<BaseSingleton>
 {
-    
+    void Start() {
+        DontDestroyOnLoad(gameObject);
+    }
 }

@@ -11,9 +11,7 @@ public class AreaExit : MonoBehaviour
     void Start() {
     }
     private void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("Cham");
-        Debug.Log(ManagerEnemies.no_of_enemies);
-        Debug.Log(EnemySpawner.EnemytoSpawn);
+        
         
         if(ManagerEnemies.no_of_enemies == 0 && EnemySpawner.EnemytoSpawn == 0) {
             if (other.gameObject.GetComponent<PlayerController>()) {

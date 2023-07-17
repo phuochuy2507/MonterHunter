@@ -10,6 +10,13 @@ public class CameraController : Singleton<CameraController>
     private void Start() {
         SetPlayerCameraFollow();
     }
+    public void CameraPlayerGameOver() {
+        StartCoroutine(cameraplayer());
+    }
+    public IEnumerator cameraplayer() {
+        yield return new WaitForSeconds(0.0005f);
+        SetPlayerCameraFollow();
+    }
 
     public void SetPlayerCameraFollow() {
         cinemachineVirtualCamera = FindObjectOfType<CinemachineVirtualCamera>();

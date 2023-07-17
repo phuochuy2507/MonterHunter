@@ -43,7 +43,7 @@ Transform:
   m_Children:
   - {fileID: 3726309440119068868}
   m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3726309438938585262
 SpriteRenderer:
@@ -287,9 +287,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db6a657515e3799409efa31c65cb994b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goldCoin: {fileID: 6479528530698944083, guid: b295a570d354d034fbbcc23cfb0c0f3c, type: 3}
+  goldCoin: {fileID: 0}
   healthGlobe: {fileID: 6479528530698944083, guid: 735ee18e1dbb98c4dafa198edcf3587d, type: 3}
-  staminaGlobe: {fileID: 6479528530698944083, guid: a8564cf2ecd2ccf4c88fcc1e650f8788, type: 3}
+  staminaGlobe: {fileID: 0}
 --- !u!114 &8310537203879084528
 MonoBehaviour:
   m_ObjectHideFlags: 0
