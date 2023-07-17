@@ -12,6 +12,7 @@ public class RedSkeleton : MonoBehaviour
     }
     private void Update() {
         boneEnemies = GameObject.FindGameObjectsWithTag("BoneEnemies");
+        Debug.Log(boneEnemies.Length);
        if (boneEnemies.Length == 0)
        {
          redSkeleton.SetActive(true);

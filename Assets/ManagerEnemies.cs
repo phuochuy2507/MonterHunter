@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ManagerEnemies : MonoBehaviour
 {
-    public static int no_of_enemies = 0;
+    public static int no_of_enemies = 1;
     [SerializeField]
     public int nim;
 

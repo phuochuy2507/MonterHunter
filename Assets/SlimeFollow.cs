@@ -37,17 +37,7 @@ public class SlimeFollow : MonoBehaviour
 
         float DistancePlayer = Vector2.Distance(player.transform.position, transform.position);
         if (DistancePlayer < LineOfsite)
-        {
-            Debug.Log("follow him");
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, Speed * Time.deltaTime);
-
-        }
-        else
-        {
-            Debug.Log("not follow");
-        }
-
-
     }
 
     private void OnDrawGizmosSelected()
