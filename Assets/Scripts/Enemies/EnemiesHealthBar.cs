@@ -21,7 +21,7 @@ public class EnemiesHealthBar : MonoBehaviour
 
     private void Start() {
         currentHealth = startingHealth;
-         healthBar.UpdateHealthBar(currentHealth, startingHealth);
+        healthBar.UpdateHealthBar(currentHealth, startingHealth);
     }
 
     public void TakeDamageBar(int damage) {
