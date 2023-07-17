@@ -13,12 +13,14 @@ public class EnemySpawner : MonoBehaviour
     private float swarmerInterval = 3.5f;
     // [SerializeField]
     // private float bigSwarmerInterval = 10f;
-    public static int EnemytoSpawn = 2;
+    public int num_to_spawn = 10;
+    public static int EnemytoSpawn;
     public GameObject objectPrefab;
 
     // Start is called before the first frame update
     void Start()
     {
+        EnemytoSpawn = num_to_spawn;
         StartCoroutine(spawnEnemy(swarmerInterval, swarmerPrefab));
         // StartCoroutine(spawnEnemy(bigSwarmerInterval, bigSwarmerPrefab, 0));
     }
