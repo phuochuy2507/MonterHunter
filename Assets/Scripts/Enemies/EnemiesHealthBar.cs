@@ -6,12 +6,13 @@ public class EnemiesHealthBar : MonoBehaviour
 {
     [SerializeField] private int startingHealth;
     [SerializeField] private GameObject deathVFXPrefab;
+    private Animator bossAnimator;
     [SerializeField] private float knockBackThrust = 15f;
-
-    private int currentHealth;
+    public int currentHealth;
     private Knockback knockback;
     private Flash flash;
     [SerializeField] FloatingHealthBar healthBar;
+    [SerializeField] private bool checkForAnimate = false;
 
     private void Awake() {
         flash = GetComponent<Flash>();
@@ -39,10 +40,17 @@ public class EnemiesHealthBar : MonoBehaviour
 
     public void DetectDeath() {
         if (currentHealth <= 0) {
+            if (checkForAnimate)
+            {
+                Debug.Log("stop");
+            }
+            else
+            {
             ManagerEnemies.no_of_enemies -= 1;
             Instantiate(deathVFXPrefab, transform.position, Quaternion.identity);
             GetComponent<PickUpSpawner>().DropItems();
             Destroy(gameObject);
+            }
         }
     }
 

@@ -10,23 +10,23 @@ public class RockSkill2 : MonoBehaviour
     [SerializeField] private float timebtwBurst;
     [SerializeField] private float restTime = 1f;
     private bool isShooting = false;
-  
+
 
     public void Attack()
     {
-            if (!isShooting)
-            {
-                StartCoroutine(ShootRoutine());
-            }
+        if (!isShooting)
+        {
+            StartCoroutine(ShootRoutine());
+        }
     }
     private IEnumerator ShootRoutine()
     {
         isShooting = true;
-
+        FindObjectOfType<AudioManager>().Play("bossSkillOne");
         for (int i = 0; i < burstCount; i++)
         {
             Vector2 targetDirection = PlayerController.Instance.transform.position - transform.position;
-
+            FindObjectOfType<AudioManager>().Play("bossSkillOne");
             GameObject newBullet = Instantiate(bulletPrefap, transform.position, Quaternion.identity);
             newBullet.transform.right = targetDirection;
 

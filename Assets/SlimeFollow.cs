@@ -16,6 +16,7 @@ public class SlimeFollow : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator myAnimator;
     EnemyPathfinding enemyPathfinding;
+     private  Renderer m_ObjectRenderer;
 
 
     private void Awake()
@@ -23,11 +24,13 @@ public class SlimeFollow : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         enemyPathfinding = GetComponent<EnemyPathfinding>();
         myAnimator = GetComponent<Animator>();
+        //  m_ObjectRenderer = GetComponent<Renderer>();
     }
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         positionBoss = Boss.transform;
+        // m_ObjectRenderer.material.renderQueue = 2999;
     }
 
 

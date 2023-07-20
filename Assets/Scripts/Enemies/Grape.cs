@@ -18,7 +18,6 @@ public class Grape : MonoBehaviour, IEnemy
 
     public void Attack() {
         myAnimator.SetTrigger(ATTACK_HASH);
-
         if (transform.position.x - PlayerController.Instance.transform.position.x < 0) {
             spriteRenderer.flipX = false;
         } else {
@@ -27,6 +26,12 @@ public class Grape : MonoBehaviour, IEnemy
     }
 
     public void SpawnProjectileAnimEvent() {
+         FindObjectOfType<AudioManager>().Play("AttackSlime");
+        Instantiate(grapeProjectilePrefab, transform.position, Quaternion.identity);
+    }
+
+    public void SpawBoneAimEvent(){
+           FindObjectOfType<AudioManager>().Play("BoneFight");
         Instantiate(grapeProjectilePrefab, transform.position, Quaternion.identity);
     }
 }

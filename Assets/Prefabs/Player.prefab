@@ -189,7 +189,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1574354672741408211}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9150982, y: 3.796626, z: 0}
+  m_LocalPosition: {x: 0.9150982, y: 3.796626, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -377,7 +377,6 @@ MonoBehaviour:
   maxHealth: 10
   knockBackThrustAmount: 10
   damageRecoveryTime: 1
-  ui_canvas_to_destroy: {fileID: 0}
 --- !u!114 &1574354672741408218
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -22,7 +22,9 @@ public class BulletFind : MonoBehaviour
     private GameObject player;
     private Rigidbody2D rb;
     public float force;
-     [SerializeField] private GameObject particleOnHitPrefabVFX;
+    [SerializeField] private GameObject particleOnHitPrefabVFX;
+    [SerializeField] private string soundEffect;
+  
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -34,6 +36,29 @@ public class BulletFind : MonoBehaviour
 
         float rot = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rot);
+    }
+
+    
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
+        EnemiesHealthBar enemyHealthBar = other.gameObject.GetComponent<EnemiesHealthBar>();
+        Indestructible indestructible = other.gameObject.GetComponent<Indestructible>();
+        PlayerHealth player = other.gameObject.GetComponent<PlayerHealth>();
+
+        if (!other.isTrigger && (enemyHealth || indestructible || player || enemyHealthBar)) {
+            if ((player)) {
+                player?.TakeDamage(1, transform);
+                Instantiate(particleOnHitPrefabVFX, transform.position, transform.rotation);
+                FindObjectOfType<AudioManager>().Play(soundEffect);
+                Destroy(gameObject);
+                
+            } else if (!other.isTrigger && indestructible) {
+                Instantiate(particleOnHitPrefabVFX, transform.position, transform.rotation);
+                FindObjectOfType<AudioManager>().Play(soundEffect);
+                Destroy(gameObject);
+            }
+        }
     }
 
     }

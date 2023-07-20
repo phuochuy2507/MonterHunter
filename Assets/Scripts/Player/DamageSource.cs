@@ -16,7 +16,9 @@ public class DamageSource : MonoBehaviour
     {
         EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
         EnemiesHealthBar enemiesHealthBar = other.gameObject.GetComponent<EnemiesHealthBar>();
+         FindObjectOfType<AudioManager>().Play("chemchung");
         enemyHealth?.TakeDamage(damageAmount);
         enemiesHealthBar?.TakeDamageBar(damageAmount);
+
     }
 }

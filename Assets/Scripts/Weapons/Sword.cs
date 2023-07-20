@@ -28,6 +28,7 @@ public class Sword : MonoBehaviour, IWeapon
     public void Attack() {
         myAnimator.SetTrigger("Attack");
         weaponCollider.gameObject.SetActive(true);
+        FindObjectOfType<AudioManager>().Play("Chem");
         slashAnim = Instantiate(slashAnimPrefab, slashAnimSpawnPoint.position, Quaternion.identity);
         slashAnim.transform.parent = this.transform.parent;
     }

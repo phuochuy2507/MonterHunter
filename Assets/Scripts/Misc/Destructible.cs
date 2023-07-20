@@ -6,10 +6,11 @@ public class Destructible : MonoBehaviour
 {
     [SerializeField] private GameObject destroyVFX;
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerEnter2D(Collider2D other)
+    {
         Projectile projectile = other.gameObject.GetComponent<Projectile>();
-
-        if (other.gameObject.GetComponent<DamageSource>() || projectile) {
+        if (other.gameObject.GetComponent<DamageSource>() || projectile)
+        {
 
             if (projectile && projectile.GetIsEnemyProjectile()) { return; }
 

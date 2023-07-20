@@ -25,12 +25,13 @@ public class RockSkill3 : MonoBehaviour
     }
     private IEnumerator ShootRoutine()
     {
+        FindObjectOfType<AudioManager>().Play("ShotGun");
         isShooting = true;
         float startAngle, currentAngle, angleStep;
         TargetConeOfInfluence(out startAngle, out currentAngle, out angleStep);
-
         for (int i = 0; i < burstCount; i++)
         {
+            FindObjectOfType<AudioManager>().Play("ShotGun");
             for (int j = 0; j < projectilesPerBurst; j++)
             {
                 Vector2 pos = FindBulletSpawnPos(currentAngle);
