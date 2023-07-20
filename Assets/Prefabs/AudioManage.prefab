@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4157769809860155151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4157769809860155145}
+  - component: {fileID: 4157769809860155150}
+  m_Layer: 0
+  m_Name: AudioManage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4157769809860155145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4157769809860155151}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 272.28024, y: 216.60182, z: -1.8212613}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4157769809860155150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4157769809860155151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69fdcb11f645baf4b9bd90d195fbbe4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Chem
+    clip: {fileID: 8300000, guid: 8cd17f362c4560942b7c7904b1789020, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: chemchung
+    clip: {fileID: 8300000, guid: 0a8e8bc845b9848468d641f52cde1d6a, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: cungten
+    clip: {fileID: 8300000, guid: bfd94b210d6763e42b5d955f1997a43a, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: staff
+    clip: {fileID: 8300000, guid: ab0eaeecec24cac48b2007000d917dc4, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: AttackSlime
+    clip: {fileID: 8300000, guid: d2b59ed4637153b49b383186c4775853, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: RotDanSlime
+    clip: {fileID: 8300000, guid: 500bbefbe2d6d624da4040bf8f8be085, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: bichem
+    clip: {fileID: 8300000, guid: 881a55aa08cbc6049a87c0c504115619, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: bossSkillOne
+    clip: {fileID: 8300000, guid: 0547cc31ed44bd84cbb4cc4b3f5612f2, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: ShotGun
+    clip: {fileID: 8300000, guid: 10a1e2ec3687d9149b715f6abcb6ba3e, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: StoneBreak
+    clip: {fileID: 8300000, guid: 00baf9821e3a0a643bae364551161f76, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: haha
+    clip: {fileID: 8300000, guid: 8d5f34177428d8d4ea8ae513c5032c99, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Growing
+    clip: {fileID: 8300000, guid: 0c06df1caa6b9d144b83db64e75a9430, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
+  - name: Angry
+    clip: {fileID: 8300000, guid: d3748cce44b05f94d923d3001a6815c5, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
+  - name: BossDie
+    clip: {fileID: 8300000, guid: da958909f333807449a3a5c932dd879f, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
+  - name: fireTouach
+    clip: {fileID: 8300000, guid: 5e3b9232ca0f9574dab57dd9a32d56df, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
+  - name: ChetChiRoiEmOi
+    clip: {fileID: 8300000, guid: 1eab983c53235424ab4dd313c45c5e6d, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: clickPlay
+    clip: {fileID: 8300000, guid: 5473c02bfd9c91347a40759203266b9a, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0

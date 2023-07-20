@@ -59,9 +59,9 @@ public class PlayerHealth : Singleton<PlayerHealth>
     public void TakeDamage(int damageAmount, Transform hitTransform)
     {
         if (!canTakeDamage) { return; }
-
         ScreenShakeManager.Instance.ShakeScreen();
         knockback.GetKnockedBack(hitTransform, knockBackThrustAmount);
+        FindObjectOfType<AudioManager>().Play("bichem");
         StartCoroutine(flash.FlashRoutine());
         canTakeDamage = false;
         currentHealth -= damageAmount;
@@ -80,6 +80,10 @@ public class PlayerHealth : Singleton<PlayerHealth>
             GetComponent<Animator>().SetTrigger(DEATH_HASH);
             StartCoroutine(DeathLoadSceneRoutine());
         }
+    }
+
+    public void Ondead(){
+          FindObjectOfType<AudioManager>().Play("ChetChiRoiEmOi");
     }
 
     private IEnumerator DeathLoadSceneRoutine()

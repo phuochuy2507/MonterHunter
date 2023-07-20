@@ -7,10 +7,8 @@ public class EnemiFollow : MonoBehaviour
    [SerializeField]
     private float Speed;
     [SerializeField]
-    private GameObject focusPlayer;
-    [SerializeField]
     private GameObject Boss;
-    private Transform player;
+    private GameObject player;
     private Transform positionBoss;
     [SerializeField]
     private float LineOfsite;
@@ -33,17 +31,17 @@ public class EnemiFollow : MonoBehaviour
     }
     void Start()
     {
-        player = focusPlayer.transform;
+        player = GameObject.FindGameObjectWithTag("Player");
         positionBoss = Boss.transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        float DistancePlayer = Vector2.Distance(player.position, transform.position);
+        float DistancePlayer = Vector2.Distance(player.transform.position, transform.position);
         if (DistancePlayer < LineOfsite && DistancePlayer > ShootingRange)
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, player.position, Speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, Speed * Time.deltaTime);
              myAnimator.SetBool("Follow", true);
              myAnimator.SetBool("Attack", false);
         }
@@ -67,7 +65,7 @@ public class EnemiFollow : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (player.position.x > positionBoss.position.x)
+        if (player.transform.position.x > positionBoss.position.x)
         {
             spriteRenderer.flipX = false;
         }

@@ -38,6 +38,7 @@ public class GrapeProjectile : MonoBehaviour
 
         Instantiate(splatterPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
+        FindObjectOfType<AudioManager>().Play("RotDanSlime");
     } 
 
     private IEnumerator MoveGrapeShadowRoutine(GameObject grapeShadow, Vector3 startPosition, Vector3 endPosition) {

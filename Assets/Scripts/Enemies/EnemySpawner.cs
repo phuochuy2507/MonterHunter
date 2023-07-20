@@ -21,12 +21,9 @@ public class EnemySpawner : MonoBehaviour
         EnemytoSpawn = num_to_spawn;
         StartCoroutine(spawnEnemy(swarmerInterval, swarmerPrefab));
         StartCoroutine(spawnEnemy(bigSwarmerInterval, bigSwarmerPrefab));
-
     }
-
     private IEnumerator spawnEnemy(float interval, GameObject enemy)
     {
-        Debug.Log(EnemytoSpawn);
         yield return new WaitForSeconds(interval);
         if(EnemytoSpawn <= 0) yield break;
         GameObject newEnemy = Instantiate(enemy, new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized, Quaternion.identity);
